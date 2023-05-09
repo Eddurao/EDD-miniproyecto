@@ -1,41 +1,25 @@
 #ifndef NODORESUMEN_H
 #define NODORESUMEN_H
-#include <stdlib.h>
+#include "NodoDato.h"
 
+
+//Propiedad de Eduardo Parra y Nicolas Torres
 
 class NodoResumen{
 	
 	
 	public:
-	NodoResumen(){
-		izq = 0;
-		der = 0;
-		izqn = 0;
-		dern = 0;
-		
-	};
+	
 	
 	~NodoResumen();
-	setlai(ListArr *izi){
-		izq = izi;
-	}	
-		
-	setlad(ListArr *ded){
-		der = ded;
-	}		
 	
-	setnri(NodoResumen *iz){
-		izqn = iz;
-	}	
-	setnrd(NodoResumen *de){
-		dern = de;
-	}	
+	int usado;
+	int total;
 	
-	private:
-	ListArr *izq;
-	ListArr *der;
-	NodoResumen *izqn;
-	NodoResumen *dern;
+	NodoDato *di;  //nodo Dato Izquierdo
+	NodoDato *dd;
+	NodoResumen *ri; 
+	NodoResumen *rd;  //nodo Resumen Derecho
 	
 	
 	

@@ -1,6 +1,10 @@
 #ifndef LISTARR_H
 #define LISTARR_H
 
+#include "NodoDato.h"
+#include "NodoResumen.h"
+
+//Propiedad de Eduardo Parra y Nicolas Torres
 class ListArr
 {
 	
@@ -8,22 +12,26 @@ class ListArr
 	
 	
 	public:
-		ListArr();
+		ListArr(int);
 		~ListArr();
-	     virtual int size() = 0;
-		 virtual void insert_left(int v) = 0;
-		 virtual void insert_right(int v) = 0;
-		 virtual void insert(int v, int i) = 0;
-		 virtual void print() = 0;
-		 virtual bool find(int v) = 0;
+	    int size();
+		void insert_left(int);
+		void insert_right(int);
+		void insert(int, int);
+		void print();
+		bool find(int);
+		void add_node();
+		void maketree();
+		NodoResumen* generarNR();
 		
-		ListArr *nextarr;
+		
+		int i;
 		int n;
-		
-	private:
+	    NodoDato *root;
+	    NodoDato *last;
+	    NodoResumen *treeroot;	
 		int b;
-		
-		int *arr;
+			
 		
 		
 		
